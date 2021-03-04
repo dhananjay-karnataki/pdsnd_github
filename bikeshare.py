@@ -12,7 +12,7 @@ DAY = {'1': 'Sunday', '2': 'Monday', '3': 'Tuesday', '4': 'Wednesday', '5': 'Thu
 
 def get_filters():
     """
-    Asks user to specify a city, month, and day to analyze.
+    Asked user to specify a city, month, and day to analyze.
 
     Returns:
         (str) city - name of the city to analyze
@@ -83,11 +83,8 @@ def load_data(city, month, day):
         df = city_df[(city_df['Month'] == month.title()) & (city_df['Day'] == DAY[day])]
     return df
 
-
-#
-#
 def time_stats(df):
-    """Displays statistics on the most frequent times of travel."""
+    """Displays stats on the most frequent times of travel."""
 
     print('\nCalculating The Most Frequent Times of Travel...\n')
     start_time = time.time()
