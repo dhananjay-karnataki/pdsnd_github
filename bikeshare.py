@@ -164,19 +164,6 @@ def user_stats(df):
     print('-' * 40)
 
 
-def display_data(df):
-
-    view_data = input('\nWould you like to view 5 rows of individual trip data? Enter yes or no\n').lower()
-    if view_data.lower() == "yes":
-        start_loc = 0
-        while True:
-            print(df.iloc[start_loc:start_loc + 5])
-            start_loc += 5
-            view_display = input("Do you wish to continue? Enter yes or no: ").lower()
-            if view_display == "no":
-                break
-
-
 def main():
     while True:
         city, month, day = get_filters()
@@ -186,7 +173,6 @@ def main():
         station_stats(df)
         trip_duration_stats(df)
         user_stats(df)
-        display_data(df)
         restart = input('\nWould you like to restart? Enter yes or no.\n')
         if restart.lower() != 'yes':
             break
